@@ -1,3 +1,33 @@
+score SUBJ_ALL_CAPS 1
+score BAYES_00 0
+score UNWANTED_LANGUAGE_BODY 1.5
+score MISSING_DATE 0
+score SB_GIF_AND_NO_URIS 0
+# Pyzor
+ifplugin Mail::SpamAssassin::Plugin::Pyzor
+# <gen:mutable>
+score PYZOR_CHECK 0 1.985 0 1.392 # n=0 n=2
+# </gen:mutable>
+endif # Mail::SpamAssassin::Plugin::Pyzor
+# DCC
+ifplugin Mail::SpamAssassin::Plugin::DCC
+score DCC_CHECK        0  1.1   0  1.1
+score DCC_REPUT_00_12  0 -0.8   0 -0.4
+score DCC_REPUT_13_19  0 -0.1   0 -0.1
+score DCC_REPUT_70_89  0  0.1   0  0.1
+score DCC_REPUT_90_94  0  0.4   0  0.6
+score DCC_REPUT_95_98  0  0.7   0  1.0
+score DCC_REPUT_99_100 0  1.2   0  1.4
+endif # Mail::SpamAssassin::Plugin::DCC
+
+ifplugin Mail::SpamAssassin::Plugin::Phishing
+phishing_openphish_feed /etc/mail/spamassassin/openphish-feed.txt
+phishing_phishtank_feed /etc/mail/spamassassin/phishtank-feed.csv
+body     URI_PHISHING      eval:check_phishing()
+describe URI_PHISHING      Url match phishing in feed
+score URI_PHISHING 0  2.4   0  2.5
+endif
+
 # Deny e-mail with these contents
 # Add content to file: /etc/mail/spamassassin/custom.cf
 
