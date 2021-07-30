@@ -1,0 +1,56 @@
+# Deny e-mail with these contents
+# Add content to file: /etc/mail/spamassassin/custom.cf
+
+body     LOCAL_RULE1     /.*Administrador da Web.*/
+score    LOCAL_RULE1     10.0
+body     LOCAL_RULE2     /.*appspot.com.*/
+score    LOCAL_RULE2     10.0
+body     LOCAL_RULE4     /.*YOUR EMAIL ACCOUNT WAS SELECTED FOR A DONATION.*/
+score    LOCAL_RULE4     10.0
+body     LOCAL_RULE6     /.*Lotofacil.*/
+score    LOCAL_RULE6     10.0
+body     LOCAL_RULE7     /.*Lotofácil.*/
+score    LOCAL_RULE7     10.0
+body     LOCAL_RULE8     /.*Sua conta de email será temporariamente bloqueada.*/
+score    LOCAL_RULE8     10.0
+body     LOCAL_RULE9     /.*Faça uma cotação agora mesmo.*/
+score    LOCAL_RULE9     10.0
+body     LOCAL_RULE10     /.*Faca uma cotacao agora mesmo.*/
+score    LOCAL_RULE10     10.0
+body     LOCAL_RULE11     /.*serviço de Reabilitação Cadastral.*/
+score    LOCAL_RULE11     10.0
+body     LOCAL_RULE12     /.*servico de Reabilitacao Cadastral.*/
+score    LOCAL_RULE12     10.0
+body     LOCAL_RULE13     /.*Eu sou um hacker que tem acesso ao seu sistema operacional.*/
+score    LOCAL_RULE13     10.0
+body     LOCAL_RULE14     /.*equipe de suporte do webmail zimbra.*/
+score    LOCAL_RULE14     10.0
+body     LOCAL_RULE15     /.*Pare de perder tempo e dinheiro buscando planilhas.*/
+score    LOCAL_RULE15     10.0
+body     LOCAL_RULE16     /.*Notificação de Audiência.*/
+score    LOCAL_RULE16     10.0
+body     LOCAL_RULE17     /.*Mude agora pra o Prime.*/
+score    LOCAL_RULE17     10.0
+body	 LOCAL_RULE18	  /.*Seu armazenamento de caixa de correio atingi.*/
+score	 LOCAL_RULE18	  10.0
+body	 LOCAL_RULE19	  /.*Para evitar bloqueio, clique no link abaixo.*/
+score	 LOCAL_RULE19	  10.0
+body	 LOCAL_RULE20	  /.*esta é uma atualização de emergência e deve ser levada muito a sério.*/
+score	 LOCAL_RULE20	  10.0
+body	 LOCAL_RULE21	  /.*Peça o novo Cartão Santander SX.*/
+score	 LOCAL_RULE21	  10.0
+body	 LOCAL_RULE22	  /.*Cartão Santander SX.*/
+score	 LOCAL_RULE22	  10.0
+body	LOCAL_RULE23	  /.*Cartão de Crédito SX do Santander.*/
+score	LOCAL_RULE23	  10.0
+body    PHISHING_BODY       /.*conta de e-mail foi infectada|.*clique aqui para atualizar|.*excedeu seu limite de|.*webmail apagando assim toda conta|.*Para atualizar sua conta de e-mail clique aqui|.*Sua Conta acaba de ser acessada|.*exigidos actualizar suas informa|.*proteja e aumente o tamanho da sua caixa de correio|.*Clique aqui e Descubra|.*Clique Aqui e Adquira|.*Aproveite o novo momento com a nova interface de webmail|.*Hi, victim|.*Para actualizar a sua conta de webmail|.*Atualize os dados da sua conta para voltar a assistir e evite|.*bloqueio do seu acesso para sua seguran|.*Por favor, proteja e aumente o tamanho da sua caixa de correio|.*anual do webmail|.*revalidar sua caixa de correio|.*sua caixa postal vai ser desati|.*queremos lembrar que a conta vinculada ao seu dispositivo de seguran|.*recusam a atualizar sua conta|.*para a conta de webmail ativo|.*entrar em sua conta e atualizar sua conta|.*Sua senha da caixa de correio|.*Eu sou um hacker que tem acesso ao seu sistema operacional|.*Depois disso, fiz um backup completo do seu disco|.*webmail a atualizarem imediatamente sua conta de webmail|ATIVA.*O DO CORREIO ELETR.*NICO|Uma tentativa incomum de login|.*excedeu o limite de armazenamento da caixa de correio|.*Seu armazenamento de caixa de correio atingiu seu limite de cota.*/i
+score    PHISHING_BODY 10
+body LOCAL_RULE24 /.*Escolha abaixo a melhor forma de consultar o protesto/
+score LOCAL_RULE24 10.0
+body	LOCAL_RULE31	/.*Por motivos de seguran|.*da nossa plataforma do Webmail|.* ocasionar a perda de suas informa|.*para que possamos sempre melhorar a nossa seguran.*/
+score	LOCAL_RULE31	10.0
+body	LOCAL_RULE32	/.*cadastramento do internet banking.*/
+score	LOCAL_RULE32	10.0
+body	LOCAL_RULE33	/.*Seu dispositivo está infectado e hackeado.*/
+score	LOCAL_RULE33	40.0
+body	LOCAL_RULE34	/.*Seu CNPJ se encontra suspenso.*/
