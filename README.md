@@ -5,7 +5,7 @@ Regras para o spamassassin em português do Brasil
 
 ``cd ~/``
 
-``git clone https://github.com/pmgBrasil/spamassassinBrRules.git``
+```git clone https://github.com/pmgBrasil/spamassassinBrRules.git```
 
 ``cd spamassassinBrRules/``
 
