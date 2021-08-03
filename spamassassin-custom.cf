@@ -84,3 +84,6 @@ score	LOCAL_RULE32	10.0
 body	LOCAL_RULE33	/.*Seu dispositivo está infectado e hackeado.*/
 score	LOCAL_RULE33	40.0
 body	LOCAL_RULE34	/.*Seu CNPJ se encontra suspenso.*/
+score	LOCAL_RULE34	10.0
+body	LOCAL_RULE35	/.*Você já possui uma pontuação decorrente|.*do vínculo deste e-mail ao BB|.*, porém para resgatar seus pontos|.* e aproveitar os benefícios do programa será necessário validar sua adesão e criar um login para acesso ao portal Ponto pra sua Empresa.*./
+score	LOCAL_RULE35	10.0
